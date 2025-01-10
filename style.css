@@ -1,14 +1,25 @@
+.gimlet-display {
+  font-family: "gimlet-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(255, 253, 253);
+  font-size: 50px;
+}
+.img {
+  width: 250px;
+  padding: 40px;
+}
+.img:hover {
+  opacity: 0.6;
+}
 
-.gimlet-display{
-    font-family: "gimlet-display", serif;
-font-weight: 400;
-font-style: normal;
-color:white;
-font-size:50px;
+p {
+  font-size: 35px;
+  font-family: "gimlet-display", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);
 }
-body{
-    background-image: url(blackback.jpg);
-}
-.text-center{
-color:white;
+.body{
+    background-color: rgb(165, 58, 58);
 }
