@@ -1,4 +1,8 @@
-const getComputerChoice = () => {
+let userWelcome = alert(
+  "Welcome! Please click on the image: rock, paper, or scissors"
+);
+
+function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
     case 0:
@@ -8,7 +12,7 @@ const getComputerChoice = () => {
     case 2:
       return "scissors";
   }
-};
+}
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return "The game is a tie.";
