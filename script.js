@@ -1,6 +1,4 @@
-let userWelcome = alert(
-  "Welcome! Please click on the image: rock, paper, or scissors"
-);
+let userWelcome = prompt("Write your name");
 
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
@@ -39,9 +37,6 @@ const determineWinner = (userChoice, computerChoice) => {
     }
   }
 };
-if (userChoice === "bomb") {
-  return "You won!";
-}
 
 const playGame = (userChoice) => {
   const computerChoice = getComputerChoice();
