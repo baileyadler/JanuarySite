@@ -31,48 +31,16 @@
 
             <h1 class="gimlet-display text-center">Welcome! </h1>
             <p class="text-center">Please select user choice below. </p>
-       
-      <button><img src="rock.png" class="img"/></button>
-        <button><img src="yellllllll.png" class="img"/></button>
-    <button class="but">  <img src="cut.png" class="img"/></button>
+       <div class="options">
+      <button onclick="playGame('rock')" class="rockbutton"><img src="rock.png" class="img"/></button>
+        <button onclick="playGame('paper')" class="paperbutton"><img src="yellllllll.png" class="img"/></button>
+    <button onclick="playGame('scissors')" class="scissorsbutton">  <img src="cut.png" class="img"/></button>
           </div>
-          <div id=""></div>
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Round #</th>
-            <th scope="col">Winner</th>
-            <th scope="col">Score</th>
-          </tr>
-        </thead>
-        <tbody class="table-group-divider">
-          <tr>
-            <th scope="row">1</th>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>...</td>
-            <td>...</td>
-          </tr>
-        </tbody>
-      </table>
+          <div id="userChoice">User:</div>
+          <div id="computerChoice">Computer:
+            <div id="resultChoice">User Won</div>
+          </div>
+     
       </div>
     </main>
 

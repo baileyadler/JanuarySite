@@ -23,4 +23,26 @@ p {
 }
 body{
  background-image: url(tie.jpg);
+ align-items:center;
+}
+.options button{
+  height:250px;
+  width:250px;
+  margin: 0 2px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+}
+.options button:hover{
+  border:30px;
+}
+.rockbutton:hover{
+  background-color:rgb(230, 202, 232);
+}
+
+.paperbutton:hover{
+  background-color:rgb(243, 241, 155);
+}
+
+.scissorsbutton:hover{
+  background-color: rgb(185, 249, 249);
 }
