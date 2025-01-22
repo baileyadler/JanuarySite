@@ -1,5 +1,3 @@
-let userWelcome = prompt("Write your name");
-
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
   switch (randomNumber) {
