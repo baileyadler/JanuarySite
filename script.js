@@ -1,5 +1,22 @@
+let userGreet = alert("Please follow the directions");
+let userName = prompt("Write your name");
+userName
+  ? (document.getElementById("greeting").innerText = `Hello, ${userName}!`)
+  : (document.getElementById("greeting").innerText = `Hello!`);
+
+const userChoice = document.getElementById("user-choice");
+const computerChoice = document.getElementById("computer-choice");
+const userResult = document.getElementById("user-result");
+const computerResult = document.getElementById("computer-result");
+const resultChoice = document.getElementById("result-choice");
+
+let playerScore = 0;
+let computerScore = 0;
+let roundNumber = 0;
+
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
+
   switch (randomNumber) {
     case 0:
       return "rock";
@@ -9,7 +26,7 @@ function getComputerChoice() {
       return "scissors";
   }
 }
-const determineWinner = (userChoice, computerChoice) => {
+const getResult = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return "The game is a tie.";
   }

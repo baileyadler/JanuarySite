@@ -64,7 +64,7 @@ body{
   font-style: normal;
   font-size:34px;
 }
-#text-center{
+#greeting{
   font-family: "gimlet-display", serif;
   font-weight: 400;
   font-style: normal;
@@ -72,6 +72,9 @@ body{
   transition:opacity 1s ease-in-out, 1s ease-in-out;
   font-size: 50px;
 }
-#text-center:hover{
-  color: rgb(66, 66, 210);
+#greeting:hover{
+  color: rgb(122, 122, 223);
+}
+.restart{
+  width:80px;
 }
