@@ -4,13 +4,7 @@ userName
   ? (document.getElementById("greeting").innerText = `Hello, ${userName}!`)
   : (document.getElementById("greeting").innerText = `Hello!`);
 
-const userChoice = document.getElementById("user-choice");
-const computerChoice = document.getElementById("computer-choice");
-const userResult = document.getElementById("user-result");
-const computerResult = document.getElementById("computer-result");
-const resultChoice = document.getElementById("result-choice");
-
-let playerScore = 0;
+let userScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
 
@@ -55,7 +49,32 @@ const getResult = (userChoice, computerChoice) => {
 
 const playGame = (userChoice) => {
   const computerChoice = getComputerChoice();
-  console.log(`You chose: ${userChoice}.`);
-  console.log(`Computer chose: ${computerChoice}.`);
-  console.log(determineWinner(userChoice, computerChoice));
+  const result = getResult(userChoice, computerChoice);
+  document.getElementById("userResult").innerText = `User score ${userScore}`;
+  document.getElementById("computerResult").innerText = `Computer Score ${computerScore}`;
+  document.getElementById("resultChoice").innerText = result;
 };
+
+document.getElementById("userResult").innerText = `user${userScore}.`;
+document.getElementById(
+  "computerResult"
+).innerText = `computer${computerScore}.`;
+document.getElementById("resultChoice").innerText = `result${result}`;
+
+if (result === "The user has won") {
+  userScore++;
+} else if (result === "The computer has won") {
+  computerScore++;
+}
+
+if (roundNumber === 5) {
+  if (userScore > computerScore) {
+    console.log("User wins");
+  } else if (userScore < computerScore) {
+    console.log("Computer won");
+  } else {
+    console.log("Tie game");
+  }
+  console.log("Game Over");
+  alert("Game is over. Thanks for playing.");
+}
