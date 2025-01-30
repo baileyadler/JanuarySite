@@ -7,7 +7,7 @@ userName
 let userScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
-
+let resultChoice;
 function getComputerChoice() {
   const randomNumber = Math.floor(Math.random() * 3);
 
@@ -47,26 +47,24 @@ const getResult = (userChoice, computerChoice) => {
   }
 };
 
-const playGame = (userChoice) => {
-  const computerChoice = getComputerChoice();
-  const result = getResult(userChoice, computerChoice);
-  document.getElementById("userResult").innerText = `User score ${userScore}`;
-  document.getElementById("computerResult").innerText = `Computer Score ${computerScore}`;
-  document.getElementById("resultChoice").innerText = result;
-};
+const computerChoice = getComputerChoice();
+const result = getResult(userChoice, computerChoice);
 
-document.getElementById("userResult").innerText = `user${userScore}.`;
-document.getElementById(
-  "computerResult"
-).innerText = `computer${computerScore}.`;
-document.getElementById("resultChoice").innerText = `result${result}`;
+
+
+document.getElementById("userResult").textContent = `User score: ${userResult}`;
+document.getElementById("computerResult").textContent = `Computer Score ${computerResult}`;
+document.getElementById("resultChoice").textContent = result;
+document.getElementById("userResult").textContent = `user: ${userResult}.`;
+document.getElementById("computerResult").textContent = `computer: ${computerResult}.`;
+document.getElementById("resultChoice").textContent = `result: ${resultChoice}.`;
 
 if (result === "The user has won") {
   userScore++;
 } else if (result === "The computer has won") {
   computerScore++;
 }
-
+roundNumber++;
 if (roundNumber === 5) {
   if (userScore > computerScore) {
     console.log("User wins");
@@ -78,3 +76,4 @@ if (roundNumber === 5) {
   console.log("Game Over");
   alert("Game is over. Thanks for playing.");
 }
+
