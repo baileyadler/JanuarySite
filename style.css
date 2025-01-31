@@ -1,80 +1,61 @@
-.gimlet-display {
-  font-family: "gimlet-display", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.img {
-  width: 250px;
-  padding: 20px;
-}
-.img:hover {
-  opacity: 0.6;
-  transform: rotate(-10deg);
-}
-p {
-  font-size: 40px;
-  font-family: "revla-round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  padding:10px;
-  color: rgb(0, 0, 0);
-}
 body{
- background-image: url(blueeeeee.png);
- align-items:center;
- background-repeat: no-repeat;
- background-size: cover;
-}
-.options button{
-  height:250px;
-  width:250px;
-  margin: 0 2px;
-  margin-bottom: 10px;
-  border-radius: 30px;
-}
-.options button:hover{
-  border:30px;
-}
-.rockbutton:hover{
-  background-color:rgb(230, 202, 232);
-}
+  font-family: "bennet-display", sans-serif;
+font-weight: 400;
+font-style: bold;
+margin:0;
+align-items: center;
+text-align: center;
+display:flex;
+flex-direction: column;
+background-image: url(blueback.avif);
+background-repeat: no-repeat;
+background-size: cover;
 
-.paperbutton:hover{
-  background-color:rgb(243, 241, 155);
 }
+h1{
+  font-family: "bennet-display", sans-serif;
+font-weight: 400;
+font-style: bold;
+color:black;
+font-size: 2rem;
+margin-top: 30px;
+}
+.choices{
+  margin-bottom:20px;
+}
+.choices button{
+  font-size:7.5rem;
+  width:160px;
+  margin: 0 10px;
+  border-radius: 200px;
+  background-color: rgb(247, 194, 95);
+  transition: background-color 0.5s ease;
+}
+.choices button:hover{
+  background-color: tan;
+}
+#playerDisplay{
+  font-size: 2rem;
+}
+#computerDisplay{
+  font-size: 2rem;
+}
+#resultDisplay{
+  font-size: 4rem;
+  margin: 30px 0;
+}
+.playerScoreDisplay{
+  font-size:2rem;
 
-.scissorsbutton:hover{
-  background-color: rgb(185, 249, 249);
 }
-#userChoice{
-  font-family: "revla-round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:32px;
-}
-#computerChoice{
-  font-family: "revla-round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:34px;
-}
-#resultChoice{
-  font-family: "revla-round", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size:34px;
+.computerScoreDisplay{
+  font-size:2rem;
 }
 #greeting{
-  font-family: "gimlet-display", serif;
-  font-weight: 400;
-  font-style: normal;
   color: rgb(9, 9, 160);
   transition:opacity 1s ease-in-out, 1s ease-in-out;
-  font-size: 50px;
+  font-size: 40px;
 }
 #greeting:hover{
   color: rgb(122, 122, 223);
-}
-.restart{
-  width:80px;
-}
+} 
