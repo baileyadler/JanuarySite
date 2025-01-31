@@ -5,7 +5,6 @@ userName
   ? (document.getElementById("greeting").innerText = `Hello, ${userName}!`)
   : (document.getElementById("greeting").innerText = `Hello!`);
 
-const choices = ["rock", "paper","scissors"];
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
 const resultDisplay = document.getElementById("resultDisplay");
@@ -15,27 +14,42 @@ const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
 let roundNumber = 0;
+
 function playGame(playerChoice){
-  roundNumber++;
-
-  if (roundNumber > 5) {
-    alert('Game Over. Thanks for playing');
+if (roundNumber >= 5) {
+  let winnerMessage = "";
+  if (playerScore > computerScore) {
+      winnerMessage = `${userName} Wins the game`;
+    } else if (computerScore > playerScore) {
+      winnerMessage = "Computer Wins the game";
+    }else {
+      winnerMessage = "Tie game";
+    }
+    alert(`${winnerMessage}! Final Score - Player: ${playerScore} and Computer: ${computerScore} Game Over. Thanks for playing`);
+    return;
       }
+      roundNumber++;
 
-  const computerChoice = choices[Math.floor(Math.random() * 3)];
+      function getComputerChoice(){
+        const randomNumber = Math.floor(Math.random() * 3);
+        if (randomNumber === 0) return "rock";
+        if (randomNumber === 1) return "paper";
+        if (randomNumber === 2) return "scissors";
+      }
+      const computerChoice = getComputerChoice();
 let result = "";
-if(playerChoice === computerChoice){
+if (playerChoice === computerChoice && playerScore === computerScore){
   result = "Tie Game";
 } else{
   switch(playerChoice){
     case "rock":
-   result = (computerChoice === "scissors") ? "You Win" : "Computer Win";
+   result = (computerChoice === "scissors" || computerChoice === "paper" ) ? "You Win" : "Computer Win";
    break;
    case "paper":
-   result = (computerChoice === "rock") ? "You Win" : "Computer Win";
+   result = (computerChoice === "rock" || computerChoice === "scissors") ? "You Win" : "Computer Win";
    break;
    case "scissors":
-   result = (computerChoice === "paper") ? "You Win" : "Computer Win";
+   result = (computerChoice === "paper" || computerChoice === "rock") ? "You Win" : "Computer Win";
    break;
   }
 }
