@@ -27,42 +27,55 @@ margin-top: 30px;
   margin-bottom:20px;
 }
 .choices button{
-  font-size:7.5rem;
-  width:160px;
+  font-size:7rem;
+  width:170px;
   margin: 0 10px;
-  border-radius: 200px;
-  background-color: rgb(224, 213, 180);
+  border-radius: 150px;
+  border-color: blue;
+  background-color: rgb(127, 238, 238);
   transition: background-color 0.5s ease;
 }
 .choices button:hover{
-  background-color: rgb(224, 228, 26);
+  background-color: rgb(211, 229, 255);
 }
 #playerDisplay{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #computerDisplay{
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 #resultDisplay{
-  font-size: 3rem;
+  font-size: 2.5rem;
   color:blue;
-  margin: 20px 0;
+  margin: 10px 0;
   font-family: "masonic-lodge", sans-serif;
 font-weight: 400;
 font-style: normal;
 }
 .playerScoreDisplay{
-  font-size:2rem;
+  font-size:1.5rem;
 
 }
 .computerScoreDisplay{
   font-size:2rem;
 }
 #greeting{
-  color: rgb(9, 9, 160);
+  color: rgb(27, 27, 228);
   transition:opacity 1s ease-in-out, 1s ease-in-out;
   font-size: 40px;
 }
 #greeting:hover{
   color: rgb(122, 122, 223);
 } 
+#restart {
+background-color:rgb(31, 15, 255);
+border-radius:1rem;
+font-size:30px;
+border: 4px;
+color:white;
+margin:10px;
+}
+#restart:hover{
+  background-color:rgb(127, 238, 238);
+  color:black;
+}

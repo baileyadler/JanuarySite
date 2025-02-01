@@ -2,8 +2,8 @@
 let userGreet = alert("Please follow the directions");
 let userName = prompt("Write your name");
 userName
-  ? (document.getElementById("greeting").innerText = `Hello, ${userName}!`)
-  : (document.getElementById("greeting").innerText = `Hello!`);
+  ? (document.getElementById("greeting").innerHTML = `<strong> Hello, ${userName}!</strong>`)
+  : (document.getElementById("greeting").innerHTML = `<strong>Hello!</strong>`);
 
 const playerDisplay = document.getElementById("playerDisplay");
 const computerDisplay = document.getElementById("computerDisplay");
@@ -67,4 +67,16 @@ playerDisplay.textContent = `PLAYER: ${playerChoice}`;
 computerDisplay.textContent = `COMPUTER: ${computerChoice}`;
 resultDisplay.textContent = result;
 }
+const restartButton = document.getElementById("restart");
+restartButton.addEventListener 
+("click", function () {
+playerScore = 0;
+computerScore = 0;
+roundNumber = 0;
+playerScoreDisplay.textContent = "0";
+computerScoreDisplay.textContent = "0";
+resultDisplay.textContent = "";
+playerDisplay.textContent = "PLAYER: ";
+computerDisplay.textContent = "COMPUTER:";
 
+});
